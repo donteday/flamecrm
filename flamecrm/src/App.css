@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  height: calc(100vh - 56px);
+}
+
+.projects {
+  min-height: 100%;
+}
