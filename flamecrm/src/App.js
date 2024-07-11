@@ -6,8 +6,10 @@ import Projects from './components/Projects/Projects';
 function App() {
   return (
     <div className="App">
-        <Projects/>
-        <Header/>
+
+      <Header />
+
+      <Projects />
 
     </div>
   );
