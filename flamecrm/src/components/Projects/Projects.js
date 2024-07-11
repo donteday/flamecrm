@@ -64,7 +64,7 @@ const Projects = () => {
 
     return (<div className="bg-body-tertiary projects bg-light projects" bg="primary" data-bs-theme="dark">
         <Tabs
-            defaultActiveKey="home"
+            defaultActiveKey="profile"
             id="uncontrolled-tab-example"
             className="mb-3 projects-tab"
             bg="primary"
