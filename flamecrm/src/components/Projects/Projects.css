@@ -2,10 +2,11 @@
     /* padding: 10px; */
 }
 
-.mb-3 {
+.projects-tab {
     background-color: #ffffff;
     border-top: 1px solid #2b3035;
     padding-top: 10px;
+    padding-left: 10px;
 }
 
 .nav-tabs .nav-link.active {
@@ -40,4 +41,12 @@
 
 .project-item__badge {
     margin-left: 5px;
+}
+
+.project-add {
+    padding: 20px;
+}
+
+.project-add__label {
+    color: white;
 }

@@ -4,7 +4,6 @@ const ProjectItem = ({ project }) => {
     return (<div className="project-item">
         <div className="project-item__name">
             <div className="project-item__id">#{project.id} </div>
-
             {project.name}
         </div>
         <div>

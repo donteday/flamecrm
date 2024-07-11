@@ -1,11 +1,13 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import ProjectItem from './ProjectItem/ProjectItem';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import './Projects.css';
+import AddProject from './AddProject/AddProject';
+import { useState } from 'react';
 
 const Projects = () => {
-    let projects = [
+    const [projects, setProjects] = useState([
         {
             id: 21,
             name: "БАРВИХА",
@@ -54,20 +56,26 @@ const Projects = () => {
                 // Other change records
             ]
         },
-    ]
+    ]);
+
+    function addProject(newProject) {
+        setProjects(prevProjects => [...prevProjects, newProject]);
+    }
+
     return (<div className="bg-body-tertiary projects bg-light projects" bg="primary" data-bs-theme="dark">
         <Tabs
-            defaultActiveKey="profile"
+            defaultActiveKey="home"
             id="uncontrolled-tab-example"
-            className="mb-3"
+            className="mb-3 projects-tab"
             bg="primary"
         >
             <Tab eventKey="home" title="+">
-                Tab content for Home
+                <AddProject addProject={addProject} />
             </Tab>
             <Tab eventKey="profile" title="В работе">
-                {projects.map((e, index) =>
+                {projects.map((e, index) => (
                     <ProjectItem project={e} />
+                )
                 )}
             </Tab>
             <Tab eventKey="contact" title="Архив">
